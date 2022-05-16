@@ -12,44 +12,94 @@
 <body>
     <div class="container" >
         <header class="header">
-            <h1>Encuesta de Programacion</h1>
-            <h2>Gracias por tomarse el tiempo para responder</h2>
+            <h1 id="title">Encuesta de Programacion</h1>
+            <p id="description">Gracias por tomarse el tiempo para responder</p>
         </header>
         <div class="container-group">
-            <form action="">
+            <form action="" id="survey-form">
                 <div class="form-group">
-                    <label class="text-label">Nombre</label>
-                    <input type="text" name="text" class="input" placeholder="" autofocus required>
+                    <label class="text-label" id="name-label">Nombre</label>
+                    <input type="text" name="text" class="input" placeholder="Ingresa tu Nombre" autofocus required id="name">
                 </div>
                 <div class="form-group">
-                    <label class="text-label" >Email</label>
-                    <input type="email" name="text" class="input" placeholder="" required>
+                    <label class="text-label" id="email-label" >Email</label>
+                    <input type="email" name="text" class="input" placeholder="Ingresa tu Email" required id="email">
                 </div>
                 <div class="form-group">
-                    <label class="text-label" >Edad <small>(Opcional)</small></label>
-                    <input type="number" name="text" class="input" placeholder="">
+                    <label class="text-label" id="number-label" >Edad <small>(Opcional)</small></label>
+                    <input type="number" name="text" class="input" placeholder="Ingresa tu Edad" min="1" max="110" id="number">
                 </div>
                 <div class="form-group">
-                    <select>
-                        <option value="">Seleccione una opcion</option>
-                        <option value="">Estudiante</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
+                    <label for="">
+                        <select name="Select" id="dropdown" style="border-radius:  5px; padding: 5px; text-align: center; color: blueviolet;">
+                            <option value="0">Seleccione una opcion</option>
+                            <option value="Estudiante">Estudiante</option>
+                            <option value="No-estudiante">No soy Estudiante</option>
+                        </select>
+                    </label>
                 </div>
-
-
-
                 <div class="form-group">
-                    <button>
+                    <label for="">
+                        <div>Conoces algun lenguaje de Programacion?</div>
+                        <input type="radio" value="0" name="yes-no" id="yes">
+                        <span>Si</span>
+                        <input type="radio" value="1" name="yes-no" id="No">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="">
+                            <span style="padding-bottom: 10px; font-size: 25px;"> Lenguajes de Programacion que conoces</span>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="Python" name="Python" id="Python"> 
+                            <span>Python</span>
+                        </div> 
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="C" name="C" id="C"> 
+                            <span>C</span>
+                        </div>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="Java" name="Java" id="Java"> 
+                            <span>Java</span>
+                        </div>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="C++" name="C++" id="C++"> 
+                            <span>C++</span>
+                        </div>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="C#" name="C#" id="C#"> 
+                            <span>C#</span>
+                        </div>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="JavaScript" name="JavaScript" id="JavaScript"> 
+                            <span>JavaScript</span>
+                        </div>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="PHP" name="PHP" id="PHP"> 
+                            <span>PHP</span>
+                        </div>
+                        <div style="display: flex;padding-bottom: 5px; ">
+                            <input type="checkbox" value="Swift" name="Swift" id="Swift"> 
+                            <span>Swift</span>
+                        </div>
+                    </label>
+                                         
+                </div>
+                <div class="form-group">
+                    <span>Comentario</span>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" onclick="Subir()" id="submit">
                         <span class="label">Enviar</span>
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
                         </span>
                     </button>
+                    
                 </div>  
             </form>
+            
         </div>
     </div>
 </body>
-</html>
